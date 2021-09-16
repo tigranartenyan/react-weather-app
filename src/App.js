@@ -66,7 +66,7 @@ function App() {
           <div className="temp">{Math.round(weather.main.temp)}°c</div>
           <div className="weather">{weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}</div>
           <div className="feels-like">Ощущается {Math.round(weather.main.feels_like)}°c</div>
-          <div className="humidity">Вероятность осадков {weather.main.humidity}%</div>
+          <div className="humidity">Влажность {weather.main.humidity}%</div>
           <div className="min-temp">Мин.температура {`${Math.round(weather.main.temp_min)}°c`}</div>
           <div className="max-temp">Макс.температура {`${Math.round(weather.main.temp_max)}°c`}</div>
           <div className="sunrise">Восход {convertTimeStamp(weather.sys.sunrise)}</div>
