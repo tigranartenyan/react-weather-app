@@ -59,19 +59,19 @@ function App() {
         {(typeof weather.main != "undefined") ? (
         <div>
           <div className="location-box">
-          <div className="location">{weather.name}</div> 
-          <div className="date">{dateBuilder(new Date())}</div>
+            <div className="location">{weather.name}</div> 
+            <div className="date">{dateBuilder(new Date())}</div>
           </div>
           <div className="weather-box">
-          <div className="temp">{Math.round(weather.main.temp)}°c</div>
-          <div className="weather">{weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}</div>
-          <div className="feels-like">Ощущается {Math.round(weather.main.feels_like)}°c</div>
-          <div className="humidity">Влажность {weather.main.humidity}%</div>
-          <div className="min-temp">Мин.температура {`${Math.round(weather.main.temp_min)}°c`}</div>
-          <div className="max-temp">Макс.температура {`${Math.round(weather.main.temp_max)}°c`}</div>
-          <div className="sunrise">Восход {convertTimeStamp(weather.sys.sunrise)}</div>
-          <div className="sunset">Закат {convertTimeStamp(weather.sys.sunset)}</div>
-          <div className="wind">Ветер {Math.round(weather.wind.speed)} м/с</div>
+            <div className="temp">{Math.round(weather.main.temp)}°c</div>
+            <div className="weather">{weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)}</div>
+            <div className="feels-like">Ощущается {Math.round(weather.main.feels_like)}°c</div>
+            <div className="humidity">Влажность {weather.main.humidity}%</div>
+            <div className="min-temp">Мин.температура {`${Math.round(weather.main.temp_min)}°c`}</div>
+            <div className="max-temp">Макс.температура {`${Math.round(weather.main.temp_max)}°c`}</div>
+            <div className="sunrise">Восход {convertTimeStamp(weather.sys.sunrise)}</div>
+            <div className="sunset">Закат {convertTimeStamp(weather.sys.sunset)}</div>
+            <div className="wind">Ветер {Math.round(weather.wind.speed)} м/с</div>
           </div>
         </div>
         ) : ('')}
